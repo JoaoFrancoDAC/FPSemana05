@@ -26,10 +26,8 @@ class ContaBancaria:
     def levantar(self, valor):
         if valor <= (self.saldo + self.limite) and valor > 0:
             if valor <= self.saldo:
-                # Se o valor é menor ou igual ao saldo, apenas subtrai do saldo
                 self.saldo -= valor
             else:
-                # Se o valor é maior que o saldo, usa o limite
                 diferenca = valor - self.saldo
                 self.saldo = 0
                 self.limite -= diferenca
